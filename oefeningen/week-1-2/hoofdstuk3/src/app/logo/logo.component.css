@@ -1,0 +1,9 @@
+.logo-img {
+  height: 140px;
+}
+
+.logo-container {
+  width: 100vw;
+  padding: 20px;
+  background: red;
+}

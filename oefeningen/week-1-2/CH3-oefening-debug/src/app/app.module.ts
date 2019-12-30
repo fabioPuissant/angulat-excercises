@@ -1,19 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms"
 import { AppComponent } from './app.component';
-import { LogoModule } from './logo/logo.module';
-import { NieuwsbriefComponent } from './nieuwsbrief/nieuwsbrief.component';
 
+import { NavbarComponent } from './navbar/navbar.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
     AppComponent,
-    NieuwsbriefComponent,
+    ContactComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    LogoModule,
     FormsModule
   ],
   providers: [],

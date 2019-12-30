@@ -1,0 +1,10 @@
+<div>
+    <div class="nieuwsbrief-container">
+        <label for="nieuwsbrief__input">Schrijf je in voor onze nieuwsbrief:&nbsp; </label>
+        <input id="nieuwsbrief__input" [(ngModel)]="mail" name="contact" placeholder="je email" />
+        <button (click)="logMail()">Submit</button>
+    </div>
+    <div *ngIf="show" class="nieuwsbrief-container">
+        <div>The entered value is {{ displayMail }}
+        </div>
+    </div>
