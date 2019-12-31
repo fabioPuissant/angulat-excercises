@@ -1,0 +1,14 @@
+<div>
+    <div>
+        <div>
+            <input (change)="noticeChange()" placeholder="First number" [(ngModel)]="first" type="number">
+        </div>
+        <div>
+            <input (change)="noticeChange()" placeholder="Second number" [(ngModel)]="second" type="number">
+        </div>
+        <div><button (click)="sum()">Optellen</button></div>
+    </div>
+    <div [hidden]="hidden">
+        The sum is: {{first + second}}
+    </div>
+</div>
