@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="flex-1">
+    <button (click)="toggle()">Toggle Display</button>
+  </div>
+  <div class="flex-1">
+    <p class="green-txt" [hidden]="!show">Toggle paragraph</p>
+  </div>
+  <div class="flex-2">
+    <p *ngFor="let time of times; let e=even; let i = index;" [ngClass]="{redtxt: e}">Button was clicked on:
+      {{ time }}
+    </p>
+  </div>
+</div>

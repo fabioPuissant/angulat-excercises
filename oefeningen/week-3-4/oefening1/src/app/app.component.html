@@ -1,0 +1,8 @@
+<div class="container">
+  <div [ngClass]="{centered: true}">
+    <label for="name_input">Insert name here: &nbsp;</label>
+    <input id="name_input" type="text" [(ngModel)]="name">
+    <button [disabled]='!name' (click)="clearField()" [ngStyle]="{marginLeft: '10px'}">Click me!</button>
+    <p [hidden]="!name">Your name is: {{ name }}</p>
+  </div>
+</div>
