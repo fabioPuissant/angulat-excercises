@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { Observable } from 'rxjs';
 import { AppComponent } from './app.component';
+import { PokemonComponent } from './pokemon/pokemon.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PokemonComponent
   ],
   imports: [
     BrowserModule

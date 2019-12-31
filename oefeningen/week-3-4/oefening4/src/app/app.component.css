@@ -1,0 +1,11 @@
+.container {
+  flex-direction: column;
+  display: flex;
+}
+
+.horizontal__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
