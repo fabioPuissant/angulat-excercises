@@ -1,0 +1,12 @@
+<div class="horz">
+    <div class="container">
+        <div *ngFor="let pet of pets">
+            <button (click)="deletePet(pet)">del</button>&nbsp;<label for="">{{ pet }}</label>
+        </div>
+        <div>
+            <input type="text" placeholder="Add a new pet... " [(ngModel)]="inputPetValue"> <button
+                (click)="addPet()">Add pet</button>
+            <p [hidden]="!showError" style='color: red;'>There is already a pet in the list with this name!</p>
+        </div>
+    </div>
+</div>

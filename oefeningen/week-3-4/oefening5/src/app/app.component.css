@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.horz {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
