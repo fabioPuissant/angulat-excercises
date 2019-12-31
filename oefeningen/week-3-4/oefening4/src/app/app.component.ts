@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Pokemon } from './models/Pokemon';
+import { SelectService } from './select.service';
 
 @Component({
   selector: 'app-root',
@@ -21,8 +22,11 @@ export class AppComponent {
 
   selected: string;
 
+  constructor(private service: SelectService) { }
+
   onSelect(event: string) {
     this.selected = event;
+    this.service.setSelected(event);
   }
 
 }

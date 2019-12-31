@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { AppComponent } from './app.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 
+import { SelectService } from './select.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [SelectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,11 +10,17 @@ import { SelectService } from '../select.service';
 export class PokemonComponent implements OnInit {
 
   @Input() pokemon: Pokemon;
+  selectedPokemonName: string;
 
   constructor(private selectService: SelectService) { }
 
   ngOnInit() {
-    this.selectService.getSelected()
+    this.selectService.selected.subscribe({
+      next: data => {
+      this.selectedPokemonName = data;
+        console.log(this.selectedPokemonName)
+      }
+    });
   }
 
 }

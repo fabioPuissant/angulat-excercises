@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject, } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SelectService {
-  Observable
+  private dataScource: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  selected: Observable<string> = this.dataScource.asObservable();
 
   constructor() { }
 
-  getSelected()
+  setSelected(nextData: string) {
+    this.dataScource.next(nextData);
+    console.log(this.selected)
+  }
+
 }

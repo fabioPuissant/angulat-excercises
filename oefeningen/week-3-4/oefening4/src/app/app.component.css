@@ -9,3 +9,19 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.goldBorder {
+  border: 2px solid gold !important;
+}
+
+.grassType {
+  background-color: green;
+}
+
+.fireType {
+  background-color: firebrick;
+}
+
+.waterType {
+  background-color: aqua;
+}

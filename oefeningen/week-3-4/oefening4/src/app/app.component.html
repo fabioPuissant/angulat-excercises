@@ -4,6 +4,8 @@
     <p [hidden]="!selected">De geselecteerde pokemon is: {{ selected }}</p>
   </div>
   <div class="horizontal__container">
-    <app-pokemon *ngFor="let item of pokemons" [pokemon]="item" (click)="onSelect(item.name)"></app-pokemon>
+    <app-pokemon
+      [ngClass]="{goldBorder: selected === item.name, waterType: item.type === 'water', fireType: item.type==='fire', grassType: item.type === 'grass'}"
+      *ngFor="let item of pokemons;" [pokemon]="item" (click)="onSelect(item.name)"></app-pokemon>
   </div>
 </div>
