@@ -1,0 +1,24 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  Omschrijving: <input type="text" required minlength="3" name="omschrijving" [(ngModel)]="omschrijving">
+  <p [hidden]="!myForm.form.get('omschrijving').hasError('minlength')">De
+    omschrijving moet minimum 3 characters
+    bevatten.</p>
+  <p [hidden]="!myForm.form.get('omschrijving').hasError('required')">De
+    omschrijving is een verplicht veld.
+  </p>
+  <br>
+  Datum: <input type="date" required name="datum" [(ngModel)]="datum"> <br>
+  <p [hidden]="!myForm.form.get('datum').hasError('required')">De datum is
+    een verplicht veld.
+  </p>
+  <br>
+  dagdeel: voormiddag <input type="radio" [(ngModel)]="dagdeel" name="dagdeel" value="voormiddag">
+  namiddag <input type="radio" [(ngModel)]="dagdeel" name="dagdeel" value="namiddag"> <br>
+  <select name="type" [(ngModel)]="type">
+    <option *ngFor="let item of types;" [value]="item">{{ item }}</option>
+  </select>
+  <br>
+  Herinnering: <input type="checkbox" name="herinnering" [(ngModel)]="herinering">
+  <br>
+  <button type="submit" [disabled]="!myForm.form.valid">Submit</button>
+</form>
